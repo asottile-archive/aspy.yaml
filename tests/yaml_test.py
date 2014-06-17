@@ -1,8 +1,11 @@
-import asottile.yaml
+from __future__ import absolute_import
+from __future__ import unicode_literals
+
+import aspy.yaml
 
 
 def test_ordered_load():
-    ret = asottile.yaml.ordered_load(
+    ret = aspy.yaml.ordered_load(
         'a: herp\n'
         'c: derp\n'
         'd: darp\n'
@@ -18,8 +21,8 @@ def test_ordered_load():
 
 
 def test_ordered_dump():
-    ret = asottile.yaml.ordered_dump(
-        asottile.yaml.OrderedDict(
+    ret = aspy.yaml.ordered_dump(
+        aspy.yaml.OrderedDict(
             (('a', 'herp'), ('c', 'derp'), ('b', 'harp'), ('d', 'darp'))
         ),
         default_flow_style=False,

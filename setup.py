@@ -2,10 +2,10 @@ from setuptools import setup
 
 
 setup(
-    name='asottile.yaml',
-    description="asottile's extensions to pyyaml.",
-    url='http://github.com/asottile/asottile.yaml',
-    version='0.1.1',
+    name='aspy.yaml',
+    description="A few extensions to pyyaml.",
+    url='http://github.com/asottile/aspy.yaml',
+    version='0.2.0',
 
     author='Anthony Sottile',
     author_email='asottile@umich.edu',
@@ -20,10 +20,10 @@ setup(
         'Programming Language :: Python :: Implementation :: PyPy',
     ],
 
-    packages=['asottile.yaml'],
-    namespace_packages=['asottile'],
+    packages=['aspy.yaml'],
+    namespace_packages=['aspy'],
     install_requires=[
-        'asottile.ordereddict',
+        'ordereddict',
         'pyyaml',
     ],
 )
