@@ -2,6 +2,7 @@ from __future__ import absolute_import
 from __future__ import unicode_literals
 
 import yaml
+
 from aspy.yaml.ordereddict import OrderedDict
 
 # Adapted from http://stackoverflow.com/a/21912744/812183

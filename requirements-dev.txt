@@ -2,6 +2,6 @@
 
 coverage
 flake8
-pylint
-pytest
 pre-commit
+pylint<1.4
+pytest
