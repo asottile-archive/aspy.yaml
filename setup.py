@@ -5,7 +5,7 @@ setup(
     name='aspy.yaml',
     description="A few extensions to pyyaml.",
     url='http://github.com/asottile/aspy.yaml',
-    version='0.2.0',
+    version='0.2.1',
 
     author='Anthony Sottile',
     author_email='asottile@umich.edu',
@@ -20,7 +20,7 @@ setup(
         'Programming Language :: Python :: Implementation :: PyPy',
     ],
 
-    packages=['aspy.yaml'],
+    packages=['aspy', 'aspy.yaml'],
     namespace_packages=['aspy'],
     install_requires=[
         'ordereddict',
