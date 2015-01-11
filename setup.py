@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 setup(
@@ -20,7 +20,7 @@ setup(
         'Programming Language :: Python :: Implementation :: PyPy',
     ],
 
-    packages=['aspy.yaml'],
+    packages=find_packages(exclude=['tests*']),
     namespace_packages=['aspy'],
     install_requires=[
         'ordereddict',
