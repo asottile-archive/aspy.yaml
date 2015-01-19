@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/asottile/aspy.yaml.svg?branch=master)](https://travis-ci.org/asottile/aspy.yaml)
 [![Coverage Status](https://img.shields.io/coveralls/asottile/aspy.yaml.svg?branch=master)](https://coveralls.io/r/asottile/aspy.yaml)
+[![Build status](https://ci.appveyor.com/api/projects/status/8ta4jqydro93c61u?svg=true)](https://ci.appveyor.com/project/asottile/aspy)
 
 aspy.yaml
 ==========
