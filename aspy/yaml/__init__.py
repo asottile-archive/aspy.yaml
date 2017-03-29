@@ -1,9 +1,9 @@
 from __future__ import absolute_import
 from __future__ import unicode_literals
 
-import yaml
+from collections import OrderedDict
 
-from aspy.yaml.ordereddict import OrderedDict
+import yaml
 
 # Adapted from http://stackoverflow.com/a/21912744/812183
 

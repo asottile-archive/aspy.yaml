@@ -12,6 +12,6 @@ test:
 
 .PHONY: clean
 clean:
-	find . -name '*.pyc' -delete
+	find -name '*.pyc' -delete
 	rm -rf .tox
 	rm -rf ./venv-*

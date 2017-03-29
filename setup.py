@@ -25,5 +25,4 @@ setup(
     packages=['aspy', 'aspy.yaml'],
     namespace_packages=['aspy'],
     install_requires=['pyyaml'],
-    extras_require={':python_version=="2.6"': ['ordereddict']},
 )
