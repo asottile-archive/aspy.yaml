@@ -5,7 +5,7 @@ setup(
     name='aspy.yaml',
     description="A few extensions to pyyaml.",
     url='http://github.com/asottile/aspy.yaml',
-    version='0.3.0',
+    version='1.0.0',
 
     author='Anthony Sottile',
     author_email='asottile@umich.edu',
