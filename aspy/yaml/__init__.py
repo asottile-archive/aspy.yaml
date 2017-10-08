@@ -8,7 +8,7 @@ import yaml
 # Adapted from http://stackoverflow.com/a/21912744/812183
 
 
-class OrderedLoader(yaml.loader.Loader):
+class OrderedLoader(getattr(yaml, 'CSafeLoader', yaml.SafeLoader)):
     pass
 
 
@@ -18,7 +18,7 @@ OrderedLoader.add_constructor(
 )
 
 
-class OrderedDumper(yaml.dumper.SafeDumper):
+class OrderedDumper(getattr(yaml, 'CSafeDumper', yaml.SafeDumper)):
     pass
 
 
