@@ -1,3 +1,4 @@
+"""Adapted from https://stackoverflow.com/a/21912744/812183"""
 from __future__ import absolute_import
 from __future__ import unicode_literals
 
@@ -5,30 +6,30 @@ from collections import OrderedDict
 
 import yaml
 
-# Adapted from http://stackoverflow.com/a/21912744/812183
+MAP_TYPE = yaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG
+
+
+def load_map(loader, node):
+    loader.flatten_mapping(node)
+    return OrderedDict(loader.construct_pairs(node))
 
 
 class OrderedLoader(getattr(yaml, 'CSafeLoader', yaml.SafeLoader)):
     pass
 
 
-OrderedLoader.add_constructor(
-    yaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG,
-    lambda loader, node: OrderedDict(loader.construct_pairs(node)),
-)
+OrderedLoader.add_constructor(MAP_TYPE, load_map)
+
+
+def dump_map(dumper, data):
+    return dumper.represent_mapping(MAP_TYPE, data.items())
 
 
 class OrderedDumper(getattr(yaml, 'CSafeDumper', yaml.SafeDumper)):
     pass
 
 
-OrderedDumper.add_representer(
-    OrderedDict,
-    lambda dumper, data: dumper.represent_mapping(
-        yaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG,
-        data.items(),
-    ),
-)
+OrderedDumper.add_representer(OrderedDict, dump_map)
 
 
 def ordered_load(stream):

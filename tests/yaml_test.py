@@ -20,6 +20,19 @@ def test_ordered_load():
     )
 
 
+def test_ordered_load_merge():
+    ret = aspy.yaml.ordered_load(
+        'a: &b\n'
+        '  c: d\n'
+        '  e: f\n'
+        'g:\n'
+        '  <<: *b\n'
+        '  h: i\n'
+    )
+    assert list(ret['a'].items()) == [('c', 'd'), ('e', 'f')]
+    assert list(ret['g'].items()) == [('c', 'd'), ('e', 'f'), ('h', 'i')]
+
+
 def test_ordered_dump():
     ret = aspy.yaml.ordered_dump(
         aspy.yaml.OrderedDict(
