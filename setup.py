@@ -4,8 +4,8 @@ from setuptools import setup
 setup(
     name='aspy.yaml',
     description="A few extensions to pyyaml.",
-    url='https://github.comasottile/aspy.yaml',
-    version='1.1.0',
+    url='https://github.com/asottile/aspy.yaml',
+    version='1.1.1',
 
     author='Anthony Sottile',
     author_email='asottile@umich.edu',
