@@ -1,3 +1,4 @@
+from setuptools import find_packages
 from setuptools import setup
 
 
@@ -5,7 +6,7 @@ setup(
     name='aspy.yaml',
     description="A few extensions to pyyaml.",
     url='https://github.com/asottile/aspy.yaml',
-    version='1.1.1',
+    version='1.1.2',
 
     author='Anthony Sottile',
     author_email='asottile@umich.edu',
@@ -21,7 +22,6 @@ setup(
         'Programming Language :: Python :: Implementation :: PyPy',
     ],
 
-    packages=['aspy', 'aspy.yaml'],
-    namespace_packages=['aspy'],
+    packages=find_packages(exclude=('tests*', 'testing*')),
     install_requires=['pyyaml'],
 )
