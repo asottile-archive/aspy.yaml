@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/asottile/aspy.yaml.svg?branch=master)](https://travis-ci.org/asottile/aspy.yaml)
 [![Coverage Status](https://img.shields.io/coveralls/asottile/aspy.yaml.svg?branch=master)](https://coveralls.io/r/asottile/aspy.yaml)
-[![Build status](https://ci.appveyor.com/api/projects/status/8ta4jqydro93c61u/branch/master?svg=true)](https://ci.appveyor.com/project/asottile/aspy/branch/master)
+[![Build Status](https://asottile.visualstudio.com/asottile/_apis/build/status/asottile.aspy.yaml?branchName=master)](https://asottile.visualstudio.com/asottile/_build/latest?definitionId=4&branchName=master)
 
 aspy.yaml
 ==========
