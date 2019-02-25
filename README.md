@@ -1,12 +1,14 @@
-[![Build Status](https://travis-ci.org/asottile/aspy.yaml.svg?branch=master)](https://travis-ci.org/asottile/aspy.yaml)
-[![Coverage Status](https://img.shields.io/coveralls/asottile/aspy.yaml.svg?branch=master)](https://coveralls.io/r/asottile/aspy.yaml)
 [![Build Status](https://asottile.visualstudio.com/asottile/_apis/build/status/asottile.aspy.yaml?branchName=master)](https://asottile.visualstudio.com/asottile/_build/latest?definitionId=4&branchName=master)
+[![Azure DevOps coverage](https://img.shields.io/azure-devops/coverage/asottile/asottile/4/master.svg)](https://dev.azure.com/asottile/asottile/_build/latest?definitionId=4&branchName=master)
 
 aspy.yaml
-==========
+=========
 
 Some extensions to pyyaml.
 
+## Installation
+
+`pip install aspy.yaml`
 
 ### aspy.yaml.ordered_load
 
