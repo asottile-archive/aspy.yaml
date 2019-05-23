@@ -2,9 +2,11 @@
 from __future__ import absolute_import
 from __future__ import unicode_literals
 
+import sys
 from collections import OrderedDict
 
 import yaml
+
 
 MAP_TYPE = yaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG
 
@@ -30,6 +32,9 @@ class OrderedDumper(getattr(yaml, 'CSafeDumper', yaml.SafeDumper)):
 
 
 OrderedDumper.add_representer(OrderedDict, dump_map)
+# in python3.6+, dicts have order by default
+if sys.version_info >= (3, 6):  # pragma: no cover (py36+)
+    OrderedDumper.add_representer(dict, dump_map)
 
 
 def ordered_load(stream):
