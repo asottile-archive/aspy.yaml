@@ -1,7 +1,10 @@
 from __future__ import absolute_import
 from __future__ import unicode_literals
 
+import sys
+
 import aspy.yaml
+import pytest
 
 
 def test_ordered_load():
@@ -46,4 +49,16 @@ def test_ordered_dump():
         'c: derp\n'
         'b: harp\n'
         'd: darp\n'
+    )
+
+
+@pytest.mark.xfail(sys.version_info < (3, 6), reason='py36+')
+def test_ordered_dump_plain_dict_py36_plus():
+    ret = aspy.yaml.ordered_dump({'z': 1, 'a': 2, 'c': 3, 'b': 4, 'd': -1})
+    assert ret == (
+        'z: 1\n'
+        'a: 2\n'
+        'c: 3\n'
+        'b: 4\n'
+        'd: -1\n'
     )
